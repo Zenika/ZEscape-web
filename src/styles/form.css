@@ -24,15 +24,15 @@ form input {
 }
 
 form textarea {
-    width: 500px;
-    resize: none;
-    padding: 12px;
-    margin: auto;
-    margin-top: 16px;
-    border-radius: 12px;
-    color: black;
-    background-color: aliceblue;
-  }
+  width: 500px;
+  resize: none;
+  padding: 12px;
+  margin: auto;
+  margin-top: 16px;
+  border-radius: 12px;
+  color: black;
+  background-color: aliceblue;
+}
 
 form input[type='time'] {
   width: fit-content;

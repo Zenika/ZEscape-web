@@ -32,7 +32,13 @@ export const AdventureFormComponent: React.FC<Props> = ({ adventure, setAdventur
     <>
       <form onSubmit={handleSubmit}>
         <input type="text" name="title" placeholder="Titre" value={adventure.title} onChange={onUpdateTextField} />
-        <textarea name="description" rows={10} placeholder="Description" value={adventure.description} onChange={onUpdateTexareatField} />
+        <textarea
+          name="description"
+          rows={10}
+          placeholder="Description"
+          value={adventure.description}
+          onChange={onUpdateTexareatField}
+        />
         <input type="time" name="time" placeholder="Titre" value={adventure.time} onChange={onUpdateTextField} />
         <input className="submit" type="submit" value="Valider" />
       </form>
