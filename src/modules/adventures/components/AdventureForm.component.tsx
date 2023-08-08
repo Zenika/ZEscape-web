@@ -8,7 +8,15 @@ type Props = {
 };
 
 export const AdventureFormComponent: React.FC<Props> = ({ adventure, setAdventure, setStep }) => {
-  const onUpdateField = (event: { target: { name: any; value: any } }) => {
+  const onUpdateTextField = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const adventureState = {
+      ...adventure,
+      [event.target.name]: event.target.value,
+    };
+    setAdventure(adventureState);
+  };
+
+  const onUpdateTexareatField = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const adventureState = {
       ...adventure,
       [event.target.name]: event.target.value,
@@ -23,9 +31,9 @@ export const AdventureFormComponent: React.FC<Props> = ({ adventure, setAdventur
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Titre" value={adventure.title} onChange={onUpdateField} />
-        <textarea name="description" placeholder="Description" value={adventure.description} onChange={onUpdateField} />
-        <input type="time" name="time" placeholder="Titre" value={adventure.time} onChange={onUpdateField} />
+        <input type="text" name="title" placeholder="Titre" value={adventure.title} onChange={onUpdateTextField} />
+        <textarea name="description" rows={10} placeholder="Description" value={adventure.description} onChange={onUpdateTexareatField} />
+        <input type="time" name="time" placeholder="Titre" value={adventure.time} onChange={onUpdateTextField} />
         <input className="submit" type="submit" value="Valider" />
       </form>
     </>
