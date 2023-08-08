@@ -1,12 +1,9 @@
+import { MiniGame } from '../minigames/types';
+
 export type Adventure = {
   id: number;
   title: string;
   description: string;
   time: string;
-};
-
-export type MiniGame = {
-  id: number;
-  title: string;
-  description: string;
+  minigames?: MiniGame[];
 };

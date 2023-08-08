@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "name": "On Off",
+    "description": "Fais basculer tous les boutons au vert en te basant sur les combinaisons"
+  },
+  {
+    "id": 1,
+    "name": "Simon Says",
+    "description": "Reproduis les séquences jouées par le système sans faire d'erreur"
+  },
+  {
+    "id": 2,
+    "name": "Flashlight",
+    "description": "Éclaire le flash de ton téléphone afin de pouvoir observer l'écran de jeu"
+  }
+]

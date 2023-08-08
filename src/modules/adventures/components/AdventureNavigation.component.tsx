@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Adventure } from '../types';
-import { AdventureFormComponent } from './AdventureForm.component';
+import { MiniGameList } from '../../minigames/components/MiniGameList.component';
 
 export const AdventureNavigationComponent = () => {
-  const [adventure, setAdventure] = useState<Adventure>({ id: 0, title: '', description: '', time: '' });
-  const [step, setStep] = useState(0);
+  const [adventure, setAdventure] = useState<Adventure | null>({ id: 0, title: '', description: '', time: '' });
+  const [step, setStep] = useState(1);
   return (
-    <>{step == 0 && <AdventureFormComponent adventure={adventure} setAdventure={setAdventure} setStep={setStep} />}</>
+    <>{step == 1 && <MiniGameList adventure={adventure} onAdventureChange={setAdventure} onStepChange={setStep} />}</>
   );
 };
