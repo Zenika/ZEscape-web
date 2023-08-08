@@ -11,7 +11,7 @@ type Props = {
 };
 
 export const MiniGameList: React.FC<Props> = ({ adventure, onAdventureChange, onStepChange }) => {
-  let [minigamesList, setMinigamesList] = useState<MiniGame[]>([]);
+  const [minigamesList, setMinigamesList] = useState<MiniGame[]>([]);
 
   useEffect(() => {
     fetchMiniGames().then((minigamesList) => setMinigamesList(minigamesList));
@@ -20,7 +20,7 @@ export const MiniGameList: React.FC<Props> = ({ adventure, onAdventureChange, on
   const [isChecked, setisChecked] = useState([false, false, false]);
 
   function handleSubmit() {
-    let minigames: MiniGame[] = [];
+    const minigames: MiniGame[] = [];
     minigamesList.forEach((minigame) => {
       if (isChecked[minigame.id]) {
         minigames.push(minigame);
@@ -34,7 +34,7 @@ export const MiniGameList: React.FC<Props> = ({ adventure, onAdventureChange, on
   }
 
   function handleChange(id: number) {
-    let newState = [...isChecked];
+    const newState = [...isChecked];
     newState[id] = !newState[id];
     setisChecked(newState);
   }
