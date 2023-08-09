@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { AdventureNavigationComponent } from '../modules/adventures/components/AdventureNavigation.component';
+import '../styles/index.css';
 
 export const Home = () => {
   return (
     <main>
-      <h1>Home</h1>
-      <Link to="/contact">Go to contact</Link>
+      <h1>Crée ton aventure !</h1>
+      <AdventureNavigationComponent />
     </main>
   );
 };
